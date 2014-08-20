@@ -1,0 +1,7 @@
+<h1>Table of Contents</h1>
+
+<ul>
+  <% @chapters.each do |chapter| %>
+    <li><a href="chapters/<%= chapter.id %>"><%= chapter.name %></a></li>
+  <% end %>
+</ul>

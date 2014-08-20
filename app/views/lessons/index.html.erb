@@ -1,0 +1,12 @@
+<h1>Lessons </h1>
+
+
+<%@section%>
+<ul>
+  <% @lessons.each do |lesson| %>
+    <li><a href="<%=lesson.id%>"><%=lesson.name%></a></li>
+    <%@section = Section.find_by(id: lesson.section_id)%>
+  <%end%>
+</ul>
+
+<p><a href="/sections/<%=@section.id%>">Return to Section Contents</a></p>

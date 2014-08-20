@@ -1,0 +1,9 @@
+<h1> Section Contents </h1>
+
+<ul>
+  <% @sections.each do |section| %>
+    <li><a href="lessons/<%=section.id%>"><%=section.name%></a></li>
+  <%end%>
+</ul>
+
+<p><a href="/">Return to Table of Contents</a></p>
