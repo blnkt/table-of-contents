@@ -10,4 +10,6 @@ class SectionsController < ApplicationController
     @lessons = @section.lessons
     render('sections/show.html.erb')
   end
+
+  def next
 end
