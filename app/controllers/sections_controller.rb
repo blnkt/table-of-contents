@@ -11,5 +11,4 @@ class SectionsController < ApplicationController
     render('sections/show.html.erb')
   end
 
-  def next
 end

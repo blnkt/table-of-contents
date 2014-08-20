@@ -20,4 +20,5 @@ class Section < ActiveRecord::Base
       previous_section_id = self.id
     end
   end
+
 end
