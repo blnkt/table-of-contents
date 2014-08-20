@@ -2,6 +2,16 @@
 
 <ul>
   <% @chapters.each do |chapter| %>
-    <li><a href="chapters/<%= chapter.id %>"><%= chapter.name %></a></li>
+    <li><a href="chapters/<%= chapter.id %>"><%= chapter.name %></a>
+      <ul><% chapter.sections.each do |section| %>
+        <li><a href="/chapters/<%=section.chapter_id%>/sections/<%=section.id%>"><%=section.name%></a>
+          <ul><% section.lessons.each do |lesson| %>
+            <li><a href="/lessons/<%=lesson.id%>"><%=lesson.name%></a></li>
+          <%end%>
+          </ul>
+        </li>
+      <%end%>
+      </ul>
+    </li>
   <% end %>
 </ul>

@@ -2,6 +2,7 @@ class ChaptersController < ApplicationController
 
   def index
     @chapters = Chapter.all
+
     render('chapters/index.html.erb')
   end
 
